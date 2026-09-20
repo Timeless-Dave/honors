@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blakely Honors Banner Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">BH</span>
+        <div>
+          <p class="brand-kicker">Carolyn F. Blakely Honors Program</p>
+          <h1>Banner Studio</h1>
+        </div>
+      </div>
+      <p class="tagline">Design event banners, social headers, and program graphics in minutes.</p>
+    </header>
+
+    <main class="layout">
+      <aside class="controls" aria-label="Banner controls">
+        <section class="panel">
+          <h2>Template</h2>
+          <div class="template-grid" id="templateGrid"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Text</h2>
+          <label>
+            Headline
+            <input type="text" id="headline" maxlength="80" value="Excellence in Honors" />
+          </label>
+          <label>
+            Subheadline
+            <input type="text" id="subheadline" maxlength="120" value="University of Arkansas at Pine Bluff" />
+          </label>
+          <label>
+            Tag line
+            <input type="text" id="tagline" maxlength="60" value="Scholarship · Leadership · Service" />
+          </label>
+        </section>
+
+        <section class="panel">
+          <h2>Colors</h2>
+          <label>
+            Primary
+            <input type="color" id="colorPrimary" value="#00563f" />
+          </label>
+          <label>
+            Accent
+            <input type="color" id="colorAccent" value="#ffc72c" />
+          </label>
+          <label>
+            Text
+            <input type="color" id="colorText" value="#ffffff" />
+          </label>
+        </section>
+
+        <section class="panel">
+          <h2>Layout</h2>
+          <label>
+            Banner size
+            <select id="sizePreset">
+              <option value="1200x630">Social share (1200 × 630)</option>
+              <option value="1920x600">Website hero (1920 × 600)</option>
+              <option value="1080x1080">Square post (1080 × 1080)</option>
+              <option value="851x315">Facebook cover (851 × 315)</option>
+            </select>
+          </label>
+          <label>
+            Show seal
+            <input type="checkbox" id="showSeal" checked />
+          </label>
+        </section>
+
+        <div class="actions">
+          <button type="button" id="downloadBtn" class="primary">Download PNG</button>
+          <button type="button" id="resetBtn" class="ghost">Reset</button>
+        </div>
+      </aside>
+
+      <section class="preview-wrap">
+        <h2 class="visually-hidden">Preview</h2>
+        <div class="preview-frame">
+          <canvas id="bannerCanvas" width="1200" height="630" aria-label="Banner preview"></canvas>
+        </div>
+        <p class="preview-meta" id="previewMeta">1200 × 630 px</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        For the Carolyn F. Blakely Honors Program community. Export PNG for web, email, and print
+        workflows.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
